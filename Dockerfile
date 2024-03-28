@@ -6,8 +6,6 @@ ARG SECRET_ARG
 ENV AWS_REGION=$REGION_ARG
 ENV AWS_ACCESS_KEY=$ACCESS_ARG
 ENV AWS_SECRET_KEY=$SECRET_ARG
-RUN go mod init main
-RUN go mod tidy
-RUN go build main.go
+RUN CGO_ENABLED=0 GOOS=linux go build main.go
 EXPOSE 8080
 CMD ["/main"]
