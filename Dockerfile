@@ -9,4 +9,4 @@ ENV AWS_SECRET_KEY=$SECRET_ARG
 COPY *.go main.go
 RUN CGO_ENABLED=0 GOOS=linux go build main.go
 EXPOSE 8080
-CMD ["/main"]
+CMD ["./main"]
