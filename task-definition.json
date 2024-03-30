@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:730335542698:task-definition/ecs-task-definition:5",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:730335542698:task-definition/ecs-task-definition:10",
   "containerDefinitions": [
     {
       "name": "ecs-container",
@@ -17,6 +17,15 @@
       "environment": [],
       "mountPoints": [],
       "volumesFrom": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/ecs-log-group",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
       "systemControls": []
     }
   ],
@@ -24,12 +33,21 @@
   "taskRoleArn": "arn:aws:iam::730335542698:role/task-role",
   "executionRoleArn": "arn:aws:iam::730335542698:role/ecs-task-execution-role",
   "networkMode": "awsvpc",
-  "revision": 5,
+  "revision": 10,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
     {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
       "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
     },
     {
       "name": "com.amazonaws.ecs.capability.task-iam-role"
@@ -42,6 +60,9 @@
     },
     {
       "name": "ecs.capability.task-eni"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
     }
   ],
   "placementConstraints": [],
@@ -54,7 +75,7 @@
   ],
   "cpu": "256",
   "memory": "512",
-  "registeredAt": "2024-03-30T15:26:17.403Z",
+  "registeredAt": "2024-03-30T16:22:58.376Z",
   "registeredBy": "arn:aws:iam::730335542698:user/jeferson",
   "tags": []
 }
