@@ -36,7 +36,7 @@ jobs:
       - name: Register new task definition revision
         id: register-task-definition
         run: |
-          new_revision=$(aws ecs register-task-definition --task-definition ecs-task-definition --container-definitions '[{"name":"ecs-container","image":"'"${{ secrets.ECR_REPO_URI }}"'"}]')
+          new_revision=$(aws ecs register-task-definition --task-definition ecs-task-definition --family ecs-task-definition --container-definitions '[{"name":"ecs-container","image":"'"${{ secrets.ECR_REPO_URI }}"'"}]')
           echo "::set-output name=new-task-definition-arn::$(echo $new_revision | jq -r '.taskDefinition.taskDefinitionArn')"
   
       - name: Update ECS service with new task definition
