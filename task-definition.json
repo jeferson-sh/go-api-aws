@@ -22,7 +22,7 @@
         "options": {
           "awslogs-group": "/aws/ecs/log-group",
           "awslogs-region": "us-east-2",
-          "awslogs-stream-prefix": "log-stream"
+          "awslogs-stream-prefix": "/aws/ecs/log-stream"
         }
       },
       "systemControls": []
