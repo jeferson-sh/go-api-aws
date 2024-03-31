@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:730335542698:task-definition/ecs-task-definition:15",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:730335542698:task-definition/ecs-task-definition:17",
   "containerDefinitions": [
     {
       "name": "ecs-container",
@@ -33,7 +33,7 @@
   "taskRoleArn": "arn:aws:iam::730335542698:role/task-role",
   "executionRoleArn": "arn:aws:iam::730335542698:role/ecs-task-execution-role",
   "networkMode": "awsvpc",
-  "revision": 15,
+  "revision": 17,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
