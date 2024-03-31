@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "ecs-container",
-      "image": "730335542698.dkr.ecr.us-east-2.amazonaws.com/ecr-repository:latest",
+      "image": "730335542698.dkr.ecr.us-east-2.amazonaws.com/ecr-repository",
       "cpu": 256,
       "memory": 512,
       "portMappings": [
