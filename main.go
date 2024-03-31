@@ -10,7 +10,7 @@ func messageHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 
 	// Escreva a mensagem de "Olá Mundo!" no corpo da resposta
-	fmt.Fprintln(w, "Olá Mundo!")
+	fmt.Fprintln(w, "Olá Mundo! Estamos na AWS!!!!")
 }
 
 func main() {
